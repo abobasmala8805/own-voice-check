@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' https://cdn.jsdelivr.net 'wasm-unsafe-eval'; style-src 'unsafe-inline'; connect-src 'self' https://cdn.jsdelivr.net https://huggingface.co https://*.hf.co; worker-src 'self' blob:; img-src data:">
+<title>Capability check</title>
+<style>body{font:16px system-ui;margin:16px;max-width:640px}button{font-size:16px;padding:10px 14px;margin:6px 6px 6px 0}pre{white-space:pre-wrap;background:#f4f4f4;padding:10px;border-radius:8px}</style></head>
+<body><h1>Device capability check</h1>
+<p>No microphone, no audio, no uploads. Step 2 downloads one model file from huggingface.co into this tab's memory and reports whether it loads.</p>
+<button id="b1" type="button">1. Check this device</button>
+<button id="b2" type="button">2. Test loading the audio decoder (225 MB)</button>
+<pre id="out">Press 1 first.</pre>
+<script type="module" src="app.js"></script></body></html>
