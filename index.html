@@ -3,7 +3,7 @@
 <title>Capability check</title>
 <style>body{font:16px system-ui;margin:16px;max-width:640px}button{font-size:16px;padding:10px 14px;margin:6px 6px 6px 0}pre{white-space:pre-wrap;background:#f4f4f4;padding:10px;border-radius:8px}</style></head>
 <body><h1>Device capability check</h1>
-<p>No microphone, no audio, no uploads. Step 2 downloads one model file from huggingface.co into this tab's memory and reports whether it loads.</p>
+<p>No microphone, no audio, no uploads. This page loads its code (ONNX Runtime Web 1.23.2, pinned version) from cdn.jsdelivr.net when it opens. Step 2 also downloads one 225 MB model file from huggingface.co into this tab's memory and reports whether it loads. Nothing you do here is sent anywhere.</p>
 <button id="b1" type="button">1. Check this device</button>
 <button id="b2" type="button">2. Test loading the audio decoder (225 MB)</button>
 <pre id="out">Press 1 first.</pre>
