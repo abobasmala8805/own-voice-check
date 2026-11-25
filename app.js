@@ -13,6 +13,7 @@ document.getElementById('b1').onclick=async()=>{
   try{const a=await navigator.gpu.requestAdapter();
     if(!a){log('WebGPU: no adapter returned');return}
     const i=a.info||{};log('WebGPU adapter:',[i.vendor,i.architecture,i.description].filter(Boolean).join(' / ')||'(hidden)');
+log('shader-f16 (adapter):',a.features.has('shader-f16')?'YES':'NO');log('adapter features:',[...a.features].join(', ')||'(none)');try{const d=await a.requestDevice(a.features.has('shader-f16')?{requiredFeatures:['shader-f16']}:{});log('device created',a.features.has('shader-f16')?'with shader-f16: OK':'without shader-f16: OK');d.destroy()}catch(e){log('device creation failed:',e.message)}
     const l=a.limits;log('maxBufferSize:',mb(l.maxBufferSize),' maxStorageBufferBindingSize:',mb(l.maxStorageBufferBindingSize));
   }catch(e){log('WebGPU error:',e.message)}
 };
